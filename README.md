@@ -6,6 +6,8 @@ Print a class's public and private property list and method list.
 ## Method List
 
 ```objc
+@interface NSObject (swizz)
+
 /**
  swizzle method
  */
@@ -21,9 +23,14 @@ Print a class's public and private property list and method list.
  */
 + (void)printMethodList;
 
+@end
+
 ```
 
 ## Usage
+
+For example check UIStatusBarManager out which was introduced in iOS13.
+
 ```objc
 #import "ViewController.h"
 #import "NSObject+swizz.h"
@@ -42,6 +49,55 @@ Print a class's public and private property list and method list.
 }
 
 @end
+
+/// console log
+ivar: _statusBarHidden class: B
+ivar: _inStatusBarFadeAnimation class: B
+ivar: _statusBarStyle class: q
+ivar: _windowScene class: @"UIWindowScene"
+ivar: _localStatusBars class: @"NSMutableSet"
+ivar: _statusBarPartStyles class: @"NSDictionary
+ivar: _statusBarAlpha class: d
+ivar: _debugMenuHandler class: @?
+方法: .cxx_destruct () return: v 
+方法: windowScene () return: @ 
+方法: statusBarFrame () return: {CGRect={CGPoint=
+方法: _setScene: (参数1 @ ) return: v 
+方法: initWithScene: (参数1 @ ) return: @ 
+方法: _scene () return: @ 
+方法: _settingsDiffActionsForScene: (参数1 @ ) ret
+方法: setWindowScene: (参数1 @ ) return: v 
+方法: isStatusBarHidden () return: B 
+方法: statusBarStyle () return: q 
+方法: statusBarHeight () return: d 
+方法: setDebugMenuHandler: (参数1 @? ) return: v 
+方法: handleTapAction: (参数1 @ ) return: v 
+方法: _updateAlpha () return: B 
+方法: statusBarHidden () return: B 
+方法: statusBarPartStyles () return: @ 
+方法: statusBarAlpha () return: d 
+方法: defaultStatusBarHeightInOrientation: (参数1 
+方法: updateStatusBarAppearance () return: v 
+方法: updateLocalStatusBars () return: v 
+方法: setupForSingleLocalStatusBar () return: v 
+方法: statusBarFrameForStatusBarHeight: (参数1 d )
+方法: updateStatusBarAppearanceWithAnimationParam
+方法: _updateStatusBarAppearanceWithClientSetting
+方法: _updateVisibilityForWindow:targetOrientatio
+方法: _updateStyleForWindow:animationParameters: 
+方法: _visibilityChangedWithOriginalOrientation:t
+方法: activateLocalStatusBar: (参数1 @ ) return: v
+方法: _updateLocalStatusBar: (参数1 @ ) return: v 
+方法: _handleScrollToTopAtXPosition: (参数1 d ) re
+方法: _adjustedLocationForXPosition: (参数1 d ) re
+方法: updateStatusBarAppearanceWithClientSettings
+方法: deactivateLocalStatusBar: (参数1 @ ) return:
+方法: createLocalStatusBar () return: @ 
+方法: localStatusBars () return: @ 
+方法: setLocalStatusBars: (参数1 @ ) return: v 
+方法: isInStatusBarFadeAnimation () return: B 
+方法: debugMenuHandler () return: @? 
+
 ```
 
 
