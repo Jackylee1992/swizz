@@ -101,7 +101,7 @@ ivar: _debugMenuHandler class: @?
 ```
 
 ## 如何检测在 iOS13 上状态栏的点击事件 How to detect a status bar click event in iOS13?
-在 iOS13 上状态栏的点击事件由 UIStatusBarManager 单独管理，通过打印 UIStatusBarManager 的私有方法，找到点击事件的处理方法 handleTapAction:，通过 hook 该方法发送自定义通知，即可通过监听改通知来实现自定义的状态栏点击处理。代码如下：
+在 iOS13 上状态栏的点击事件由 UIStatusBarManager 单独管理，通过打印 UIStatusBarManager 的私有方法，找到点击事件的处理方法 handleTapAction:，通过 hook 该方法发送自定义通知，即可通过监听改通知来实现自定义的状态栏点击处理。
 ```objc
 
 #ifdef __IPHONE_13_0
